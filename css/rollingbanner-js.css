@@ -1,0 +1,115 @@
+.cont2_1{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+.container{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    
+    /* align-items: center; */
+    /* position: absolute;
+    left:0;
+    top:0 */
+}
+
+/* 배너 컨테이너 */
+.rollingbanner{
+    width: 100%;
+    height: 350px;
+    font-size: .875rem;
+    color: #fff;
+    letter-spacing: -.075em;
+ background-color: #fff; 
+}
+.roller img{
+    /* color: #fff;
+    text-decoration: none; */
+    /* white-space: nowrap; */
+}
+.rollingbanner > .wrap{
+    position: relative;
+    width: 1920px;
+    height: 400px;
+    margin: 0 auto;
+    top:-25px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.wrap::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* width: 20px; */
+    height: 100%;
+    z-index: 1;
+    /* background: linear-gradient(to right, rgba(170,0,0,1) 0%, rgba(170,0,0,0.75) 51%, rgba(170,0,0,0) 100%); */
+}
+.wrap::after{
+    content:'';
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* width: 20px; */
+    height: 100%;
+    z-index: 1;
+    /* background: linear-gradient(to right, rgba(170,0,0,0) 0%, rgba(170,0,0,0.75) 51%, rgba(170,0,0,1) 100%); */
+}
+
+/* 애니메이션하는 요소 */
+.roller{
+    position: absolute;
+    height: 100%;
+    top:25px;
+}
+.roller > ul{
+    margin: 0;
+    list-style: none;
+    padding: 14px 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+/* .roller > ul > li{
+    margin: 0 5px;
+    
+} */
+
+.roller > ul > li{
+    padding-right: 35px;
+    box-sizing: border-box;
+    border-radius:20px;
+    
+}
+
+.roller > ul > li > a{
+    
+    border-radius:20px;
+    
+}
+
+.roller > ul > li > a > video{
+    padding:10px;
+    box-sizing: border-box;
+    border-radius:20px;
+    transition: all 0.4s
+    
+}
+
+.roller > ul > li > a > video:hover{
+    padding:10px;
+    box-sizing: border-box;
+    transform: scale( 1.1 );
+    border-radius:20px;
+    /* box-shadow:0 2px 5px rgba(0,0,0,.1); */
+    /* background: rgba( 255, 255, 255, 0.25 ); */
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 20px );
+-webkit-backdrop-filter: blur( 20px );
+    /* cursor: pointer; */
+}

@@ -1,0 +1,303 @@
+@media screen and (max-width:1200px){
+/* menu open */
+.mobile_top_menu_wrap{
+    display:flex;
+    position: relative;
+    width:100%;
+    
+}
+.mobile_top_menu_wrap ul{
+    display:flex;
+    position: absolute;
+    top:50%;right:0;transform:translate(-50%,-50%);
+}
+.select{
+    background: url(../images/top_button_grey.png) no-repeat 100% 52%/13px auto;
+}
+
+.full_menu{display:block;position:absolute;top:50%;right:0;transform:translate(-50%,-50%);}
+input[id="menudot"] {display:none;}
+input[id="menudot"] + label {display:block;width:30px;height:20px;position:relative;cursor:pointer;}
+input[id="menudot"] + label span {display:block;position:absolute;width:100%;height:3px;border-radius:30px;background:#000;transition:all .35s;}
+input[id="menudot"] + label span:nth-child(1) {top:0;}
+input[id="menudot"] + label span:nth-child(2) {top:50%;transform:translateY(-50%);}
+input[id="menudot"] + label span:nth-child(3) {bottom:0;}
+input[id="menudot"]:checked + label span:nth-child(1) {top:50%;transform:translateY(-50%) rotate(45deg);}
+input[id="menudot"]:checked + label span:nth-child(2) {opacity:0;}
+input[id="menudot"]:checked + label span:nth-child(3) {bottom:50%;transform:translateY(50%) rotate(-45deg);}
+
+div[class="sidebar"] {width:300px;height:100vh;background:#222;position:fixed;top:0;right:-300px;z-index:1;transition:all .35s;}
+input[id="menudot"]:checked + label + div + div {right:0;}
+
+input[id="menuicon"] {display:none;}
+input[id="menuicon"] + ul {display:block;position:fixed;right:0;top:50%;transform:translateY(-50%);transition:all .35s;text-align:right;}
+input[id="menuicon"] + ul > li {display:block;width:50px;height:50px;border:1px solid #f1f1f1;position:relative;margin-top:-1px;}
+input[id="menuicon"] + ul > li > a {display:block;width:auto;height:50px;overflow:hidden;transition:all .35s;}
+input[id="menuicon"] + ul > li > label {display:block;cursor:pointer;width:auto;height:50px;background:#dadada;}
+input[id="menuicon"] + ul > li:nth-child(1) label span {display:block;position:absolute;width:50%;height:3px;border-radius:30px;background:#333;transition:all .35s;}
+input[id="menuicon"] + ul > li:nth-child(1) label span:nth-child(1) {top:30%;left:50%;transform:translateX(-50%);}
+input[id="menuicon"] + ul > li:nth-child(1) label span:nth-child(2) {top:50%;left:50%;transform:translate(-50%,-50%);}
+input[id="menuicon"] + ul > li:nth-child(1) label span:nth-child(3) {bottom:30%;left:50%;transform:translateX(-50%);}
+input[id="menuicon"] + ul > li:nth-child(2) a .icon {background:url('./img/search.png') center center no-repeat;background-size:50%;display:inline-block;width:50px;height:50px;vertical-align:middle;}
+input[id="menuicon"] + ul > li:nth-child(3) a .icon {background:url('./img/sand-clock.png') center center no-repeat;background-size:50%;display:inline-block;width:50px;height:50px;vertical-align:middle;}
+input[id="menuicon"]:checked + ul {z-index:2;right:300px;}
+input[id="menuicon"]:checked + ul > li:nth-child(1) label {z-index:2;right:300px;}
+input[id="menuicon"]:checked + ul > li:nth-child(1) label span:nth-child(1) {top:50%;left:50%;transform:translate(-50%,-50%) rotate(45deg);}
+input[id="menuicon"]:checked + ul > li:nth-child(1) label span:nth-child(2) {opacity:0;}
+input[id="menuicon"]:checked + ul > li:nth-child(1) label span:nth-child(3) {bottom:50%;left:50%;transform:translate(-50%,50%) rotate(-45deg);}
+div[class="sidebar"] {width:300px;height:100vh;background:#f5f5f5;position:fixed;top:0;right:-300px;z-index:1;transition:all .35s;}
+input[id="menuicon"]:checked + ul + div {right:0;}
+
+
+.flex_wrap{
+    display:none;
+}
+
+.gnb_mobile_back{
+ display:none;
+}
+
+.back{
+    display:none;
+    position: fixed;
+    width:100%;
+    height:100vh;
+    background:#111;
+    z-index:1;
+}
+.gnb{
+    width:100%;
+    display: flex;
+    justify-content: end;
+    margin: 0 20px;
+    position:relative;
+    right:0;
+}
+.gnb_wrap ul{
+    display:flex;
+}
+.gnb_wrap ul > li{
+margin:0 22px;
+/* float:left; */
+display:flex;
+
+}
+
+.nav_bg{
+    display:none;
+    width:100%;
+    height:156px;
+    text-indent:-9999px;
+    background:#e0d7cb;position:absolute;left:0;top:68px;z-index:2;
+    /* display:flex; */
+    justify-content:center;
+}
+
+.nav_bg_wrap{
+    width:1200px;
+    height:156px;
+    position:relative;
+    margin:0 auto;
+}
+
+.nav_bg_wrap img{
+    position:absolute;
+    display:block;
+}
+
+.edam_wrap{
+    display:none;
+    width:315px;
+    height:113px;
+    border-top:2px solid#f1f1df;
+    padding:21px 0;
+    box-sizing: border-box;
+    position:absolute;
+    left:-227px;
+    top:65px;
+    line-height:20px;
+}
+
+.edam_wrap_1{
+    float:left;
+    width:70px;
+    height:63px;
+    margin-right:25px;
+    /* position:absolute;
+    top:20px;
+    left:0; */
+}
+
+.edam_wrap_2{
+    float:left;
+    width:58px;
+    height:114px;
+    margin-right:25px;
+}
+
+.edam_wrap_3{
+    float:left;
+    width:57px;
+    height:114px;
+    margin-right:25px;
+}
+
+.edam_b{
+    font-weight:bold;
+}
+
+.notice_wrap{
+    display:none;
+    width:84px;
+    height:38px;
+    border-top:2px solid#f1f1df;
+    padding:21px 0;
+    box-sizing: border-box;
+    position:absolute;
+    top:65px;
+    left:-17px;
+    line-height:20px;
+}
+
+.artists_wrap{
+    display:none;
+    width:58px;
+    height:38px;
+    border-top:2px solid#f1f1df;
+    padding:21px 0;
+    box-sizing: border-box;
+    position:absolute;
+    top:65px;
+    left:-2px;
+    line-height:20px;
+}
+
+
+/* top_menu */
+
+.top_menu_wrap{
+    font-family:'Noto Sans KR', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    position: relative;
+    /* top: 18px;
+    right:14px; */
+    display: flex;
+    justify-content: end;
+    /* line-height: 1; */
+}
+.top_menu_wrap ul, .top_menu_wrap ul li{
+    display:flex;
+}
+
+.select{
+    width:38px;
+    /* height:15px; */
+    background:url(../images/top_button_grey.png) no-repeat 100% 50%/13px auto;
+    margin-left: 8px;
+
+}
+
+select::-ms-expand { 
+	display: none;/*for IE10,11*/
+}
+
+.language {
+    -o-appearance: none;/* for opera */
+    -webkit-appearance: none;/* for chrome */
+    -moz-appearance: none;/*for firefox*/
+    /* 위 세개 코드들은 각 브라우저의 화살표 호환성을 위한 코드임  */
+    appearance: none;
+    /* 화살표 없애기 코드 */
+    
+}
+
+.language {
+    line-height: 1;
+    font-family:'Noto Sans KR', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    background: none;
+    width: 47px;
+    height: 15px;
+    /* background:url(../images/top_menu_lang.png) no-repeat;
+    text-indent:-9999px; */
+    /* background: none;
+    font-family: "Adobe Myungjo Std", 'Chosunilbo_myungjo';
+    font-size: 20px; */
+    border: none;
+    /* 테두리 없애기(숨기기) */
+    outline: 0 none;
+    /* 마우스 클릭 했을 때 나오는 바깥선 없애기(숨기기) */
+}
+
+.language option {
+    font-family:'Noto Sans KR', sans-serif;
+    font-weight: 900;
+    font-size: 15px;
+    /* background:none; */
+    border: 0;
+    outline: 0 none;
+    color:#000;
+    padding: 3px 0;
+}
+
+.login {
+    /* font-family: "Adobe Myungjo Std", 'Chosunilbo_myungjo';
+    font-size: 20px;
+    
+    line-height:27px; */
+    
+    height: 15px;
+    /* background:url(../images/top_2.png) no-repeat;
+    text-indent:-9999px; */
+}
+
+.login a{
+    
+    height: 15px;
+    /* background:url(../images/top_menu_login.png) no-repeat;
+    text-indent:-9999px; */
+    display:block;
+    float:left;
+    
+}
+
+.login span{
+    width: 1px;
+    height: 15px;
+    background:url(../images/top_menu_line.jpg) no-repeat;
+    margin:0 8px;
+    display:block;
+    float:left;
+}
+
+.login span{
+    width: 1px;
+    height: 15px;
+    background:url(../images/top_menu_line.jpg) no-repeat;
+    margin:0 8px;
+    display:flex;
+    position:relative;
+    top:3px;
+}
+
+
+.account > a{
+    width:21px;
+    height:24px;
+    background:url(../images/header_top_menu_login.png) no-repeat;
+    text-indent:-9999px;
+    float:left;
+    margin:0 16px;
+}
+
+.bag > a{
+    width:24px;
+    height:24px;
+    background:url(../images/header_top_menu_bag.png) no-repeat;
+    text-indent:-9999px;
+    float:left;
+}
+
+}

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDAM</title>
+    <script type="text/javascript">
+        var mobileKeyWords = new Array('iPhone', 'iPod', 'BlackBerry', 'Android', 'Windows CE', 'LG', 'MOT', 'SAMSUNG', 'SonyEricsson');
+        for (var word in mobileKeyWords){
+            if (navigator.userAgent.match(mobileKeyWords[word]) != null){
+                location.href = "mobile/";
+                // web/mobile
+                // http://ID.dothome.co.kr/mobile
+                break;
+            }
+        }
+        </script>
+    <link rel="stylesheet" type="text/css" href="slick.css/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick.css/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="css/edam.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.bxslider.js"></script>
+</head>
+<body>
+<!-- ***1920x937px - 모든 웹사이트 보여지는 화면 크기  -->
+<div class="skip_menu">
+    <a href="#gnb"><span>메뉴 바로가기</span></a>
+    <a href="#top_menu"><span>사용자 메뉴 바로가기</span></a>
+    <a href="#cont2"><span>콘텐트2 바로가기</span></a>
+</div> 
+<!-- 링크랑 텍스트 포폴 gnb, content들에 맞게 수정하기 -->
+<!-- <artice class="top_txt">
+    <h2 class="hide">공지사항 소식</h2>
+    <div class="top_txt_1_wrap">
+        <a href="#none" class="top_txt_1">화해 어워드 1위 다이브인 선크림 40% OFF</a>
+    </div>
+</artice> -->
+<div class="header_wrap">
+<header id="header" class="header">
+    <h1 class="logo"><a href="index.html"><img src="images/edam_logo.png" alt="EDAM"></a></h1>
+<div class="flex_wrap">
+<nav id="gnb" class="gnb">
+    <div class="gnb_wrap">
+    <!-- 바로가기는 id 값 주고 #gnb 꼭 해야함 -->
+    <h2 class="hide">주요메뉴</h2>
+    <ul>
+        <li class="edam"><a href="edam.html" role="tab">EDAM</a>
+        </li>
+        <li class="notice"><a href="#none" role="tab">NOTICE</a>
+        </li>
+        <li class="artists"><a href="#none" role="tab">ARTISTS</a>
+        </li>
+        <li class="made_edam"><a href="#none">madeEDAM</a></li>
+        <li class="audtion"><a href="#none" role="tab">AUDITION</a>
+        </li>
+        <li class="contact_us"><a href="#none" role="tab">CONTACT US</a>
+        </li>
+    </ul>
+    </div>
+</nav>
+<div class="top_menu_wrap">
+    <div class="top_menu">
+        <h2 class="hide">사용자 메뉴</h2> <!-- Top menu -->
+        <ul class="">
+            <li class="select">
+            <form class="en">
+            <select name="language" class="language">
+                <option value="en">KR</option>
+                <option value="ko">EN</option>
+            </select>
+            </form>
+            </li>
+            <li class="login">
+                <span></span>
+                <a href="login.html">LOGIN</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+</div>
+</header>
+</div>
+<script>
+    $( document ).ready( function() {
+      var jbOffset = $( '.header_wrap' ).offset();
+      $( window ).scroll( function() {
+        if ( $( document ).scrollTop() > jbOffset.top ) {
+          $( '.header_wrap' ).addClass( 'jbFixed' );
+        }
+        else {
+          $( '.header_wrap' ).removeClass( 'jbFixed' );
+        }
+      });
+    } );
+  </script>
+  <script>
+    $(document).ready(function(){
+        $('.cont1_2_wrap').bxSlider({
+            slideWidth:79.99,
+            auto:true,
+            autoHover : true,
+            controls: false,
+            speed:300,
+            pager: false,
+            minSlides: 1,
+            maxSlides: 1
+            // mode:"vertical"
+        });
+
+        $('.iu_images_wrap').bxSlider({
+            slideWidth:250,
+            auto:true,
+            autoHover : true,
+            controls: false,
+            speed:300,
+            pager: false,
+            minSlides: 1,
+            maxSlides: 1
+            // mode:"vertical"
+        });
+
+        $('.list-unstyled').bxSlider({
+            slideWidth:330,
+            auto:true,
+            autoHover : true,
+            controls: false,
+            speed:300,
+            pager: false,
+            minSlides: 1,
+            maxSlides: 1,
+            // mode:"vertical"
+        });
+    });
+  </script>
+<body>
+<main id="content" class="content">
+<section class="cont_empty">
+    <div class="empty_box">
+        
+    </div>
+</section>
+<section class="cont1">
+    <h2 class="sa">EDAM<br>Entertainment</h2>
+    <div class="sa madeedam"><img src="images/madeedam_logo.jpg" alt="madeedam"></div>
+    <p class="sa">EDAM은 MADE를 거꾸로 나열한 것이며<br>
+        순수 한글말로 이다음의 새로운 세상을 만들어 나가겠다는 의지가 담겨있습니다.
+        <br>
+        <br>
+        뻔한 생각을 뒤집어 시대를 뛰어넘는 새로운 엔터테인먼트 산업을 지향하며,<br>
+        사랑받는 것을 넘어 사랑을 줄 수 있고<br>
+        <br>
+        <br>
+        꿈꾸는 것을 넘어 꿈을 실현할 수 있고<br>
+        어떤 것보다 사람을 먼저 위하는<br>
+        Global 엔터테인먼트 비즈니스를 선도하고 있습니다.
+        <br>
+        <br>
+        그런 가치로운 곳이 이담이 될 수 있도록<br>
+        이다음의 세상을 아름답게 메이드 하는 EDAM으로 발돋움할 것입니다.</p>
+    <div class="back_text"><img src="images/edam_text.png" alt="EDAM"></div>
+    <!-- <div class="back_text">EDAM</div> -->
+</section>
+<section class="cont2">
+</section>
+<section class="cont3">
+</section>
+<script>
+    // Scroll Animation (sa, 스크롤 애니메이션)
+    const saTriggerMargin = 50;
+    const saElementList = document.querySelectorAll('.sa');
+
+    const saFunc = function() {
+      for (const element of saElementList) {
+        if (!element.classList.contains('show')) {
+          if (window.innerHeight > element.getBoundingClientRect().top + saTriggerMargin) {
+            element.classList.add('show');
+          }
+        }
+      }
+    }
+
+    window.addEventListener('load', saFunc);
+    window.addEventListener('scroll', saFunc);
+</script>
+</main>
+<footer class="height">
+    <h2 class=""><img src="images/f-logo.jpg" alt="EDAM"></h2>
+    <div class="sns">
+        <ul>
+            <li><img src="images/sns-n-pc.jpg" alt="네이버"></li>
+            <li><img src="images/sns-t-pc.jpg" alt="트위터"></li>
+            <li><img src="images/sns-i-pc.jpg" alt="인스타그램"></li>
+            <li><img src="images/sns-y-pc.jpg" alt="유튜브"></li>
+        </ul>
+        <div class="p_wrap">
+            <p class="footer_p_3">© 2020 EDAM. All rights reserved.</p>
+        <div class="p_wrap_wrap">
+        <p class="footer_p_1">배종한</p><address>서울 특별시 강남구 테헤란로103길 17</address>
+        <p class="footer_p_2">edam@edam-ent.com</p>
+        </div>
+        
+        </div>
+    </div>
+</footer>
+</body>
+</html>

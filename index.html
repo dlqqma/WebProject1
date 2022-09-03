@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDAM</title>
+    <script type="text/javascript">
+        var mobileKeyWords = new Array('iPhone', 'iPod', 'BlackBerry', 'Android', 'Windows CE', 'LG', 'MOT', 'SAMSUNG', 'SonyEricsson');
+        for (var word in mobileKeyWords){
+            if (navigator.userAgent.match(mobileKeyWords[word]) != null){
+                location.href = "mobile/";
+                // web/mobile
+                // http://ID.dothome.co.kr/mobile
+                break;
+            }
+        }
+        </script>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/mediaquery.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" type="text/css" href="css/rollingbanner-js.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/parallax.js"></script>
+    <!--<link rel="stylesheet" href="bxslider.css/jquery.bxslider.css"> -->
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.bxslider.js"></script>
+    <script type="text/javascript">
+</script>
+</head>
+<body>
+<!-- ***1920x937px - 모든 웹사이트 보여지는 화면 크기  -->
+<div class="skip_menu">
+    <a href="#gnb"><span>메뉴 바로가기</span></a>
+    <a href="#top_menu"><span>사용자 메뉴 바로가기</span></a>
+    <a href="#cont2"><span>콘텐트2 바로가기</span></a>
+</div> 
+<!-- 링크랑 텍스트 포폴 gnb, content들에 맞게 수정하기 -->
+<!-- <artice class="top_txt">
+    <h2 class="hide">공지사항 소식</h2>
+    <div class="top_txt_1_wrap">
+        <a href="#none" class="top_txt_1">화해 어워드 1위 다이브인 선크림 40% OFF</a>
+    </div>
+</artice> -->
+<div class="header_wrap">
+<header id="header" class="header">
+    <h1 class="logo"><a href="index.html"><img src="images/edam_logo.png" alt="EDAM"></a></h1>
+<div class="flex_wrap">
+<nav id="gnb" class="gnb">
+    <div class="gnb_wrap">
+    <!-- 바로가기는 id 값 주고 #gnb 꼭 해야함 -->
+    <h2 class="hide">주요메뉴</h2>
+    <ul>
+        <li class="edam"><a href="edam.html" role="tab">EDAM</a>
+        <div class="edam_wrap">
+        </div>
+        </li>
+
+        <li class="notice"><a href="#none" role="tab">NOTICE</a>
+        </li>
+
+        <li class="artists"><a href="#none" role="tab">ARTISTS</a>
+        </li>
+
+        <li class="made_edam"><a href="#none">madeEDAM</a></li>
+
+        <li class="audtion"><a href="#none" role="tab">AUDITION</a>
+        </li>
+        <li class="contact_us"><a href="#none" role="tab">CONTACT US</a>
+        </li>
+    </ul>
+    </div>
+</nav>
+    <!-- <div class="nav_bg">
+    <div class="nav_bg_wrap">
+        <img class="nav_bg_image" src="images/header_2depth_bg.jpg" alt="">
+    </div>
+    </div> -->
+<div class="top_menu_wrap">
+    <div class="top_menu">
+        <h2 class="hide">사용자 메뉴</h2> <!-- Top menu -->
+        <ul class="">
+            <li class="select">
+            <form class="en">
+            <select name="language" class="language">
+                <option value="en">KR</option>
+                <option value="ko">EN</option>
+            </select>
+            </form>
+            </li>
+            <li class="login">
+                <span></span>
+                <a href="login.html">LOGIN</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+</div>
+<div class="mobile_top_menu_wrap">
+    <div class="top_menu">
+        <h2 class="hide">사용자 메뉴</h2> <!-- Top menu -->
+        <ul class="">
+            <li class="select">
+            <form class="en">
+            <select name="language" class="language">
+                <option value="en">KR</option>
+                <option value="ko">EN</option>
+            </select>
+            </form>
+            </li>
+            <li class="login">
+                <span></span>
+                <a href="login.html">LOGIN</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<input type="checkbox" id="menuicon">
+<ul>
+	<li>
+		<label for="menuicon">
+			<span></span><span></span><span></span>
+		</label>
+	</li>
+	
+</ul>
+
+<div class="sidebar">
+</div>
+<div class="full_menu">
+    <input type="checkbox" id="menudot">
+    <label for="menudot">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+</div>
+<div class="sidebar"></div>
+</div>
+<div class="gnb_mobile_back">
+    <nav class="gnb_mobile">
+        <!-- <div class="flex_wrap"> -->
+            <nav id="gnb" class="gnb">
+                <div class="gnb_wrap">
+                <!-- 바로가기는 id 값 주고 #gnb 꼭 해야함 -->
+                <h2 class="hide">주요메뉴</h2>
+                <ul>
+                    <li class="edam"><a href="edam.html" role="tab">EDAM</a>
+                    <div class="edam_wrap">
+                    </div>
+                    </li>
+            
+                    <li class="notice"><a href="#none" role="tab">NOTICE</a>
+                    </li>
+            
+                    <li class="artists"><a href="#none" role="tab">ARTISTS</a>
+                    </li>
+            
+                    <li class="made_edam"><a href="#none">madeEDAM</a></li>
+            
+                    <li class="audtion"><a href="#none" role="tab">AUDITION</a>
+                    </li>
+                    <li class="contact_us"><a href="#none" role="tab">CONTACT US</a>
+                    </li>
+                </ul>
+                </div>
+            </nav>      
+            <!-- </div> -->
+    </nav>
+</div>
+</header>
+</div>
+<div class="back"></div>
+<script>
+</script>
+<script>
+    $( document ).ready( function() {
+      var jbOffset = $( '.header_wrap' ).offset();
+      $( window ).scroll( function() {
+        if ( $( document ).scrollTop() > jbOffset.top ) {
+          $( '.header_wrap' ).addClass( 'jbFixed' );
+        }
+        else {
+          $( '.header_wrap' ).removeClass( 'jbFixed' );
+        }
+      });
+    } );
+  </script>
+  <script>
+    $(document).ready(function(){
+        $('.cont1_2_wrap').bxSlider({
+            slideWidth:79.99,
+            auto:true,
+            autoHover : true,
+            controls: false,
+            speed:300,
+            pager: false,
+            minSlides: 1,
+            maxSlides: 1
+            // mode:"vertical"
+        });
+
+        $('.iu_images_wrap').bxSlider({
+            slideWidth:250,
+            auto:true,
+            autoHover : true,
+            controls: false,
+            speed:300,
+            pager: false,
+            minSlides: 1,
+            maxSlides: 1
+            // mode:"vertical"
+        });
+
+        $('.list-unstyled').bxSlider({
+            slideWidth:330,
+            auto:true,
+            autoHover : true,
+            controls: false,
+            speed:300,
+            pager: false,
+            minSlides: 1,
+            maxSlides: 1,
+            // mode:"vertical"
+        });
+    });
+  </script>
+<body>
+<main id="content" class="content">
+<section class="cont1">
+    <h2 class="hide">공지사항</h2>
+    <div class="cont1_wrap">
+    <div class="cont1_1">
+        <p>NOTICE</p>
+        <div class="notice_txt">
+            <ul class="ul_1">
+                <li><a href="#none">안녕하세요. EDAM엔터테인먼트입니다.</a></li>
+                <li><a href="#none">[아이유]IU OFFICIAL LIGHT STICK VER.3 ‘I-KE’ 예약 판매 안내</a></li>
+                <li><a href="#none">[아이유]made EDAM 내 유애나 5기 인증 관련 안내</a></li>
+                <li><a href="#none">[아이유]아이유 공식 팬클럽 <유애나> 5기 모집 안내</a></li>
+            </ul>
+            <ul class="ul_2">
+                <li>2022.06.21</li>
+                <li>2022.05.02</li>
+                <li>2022.03.27</li>
+                <li>2022.03.27</li>
+                
+            </ul>
+        </div>
+    </div>
+    
+    <div class="cont1_2">
+        <div class="cont1_2_wrap_wrap">
+            <p>IU<BR>ALBUM</p>
+            <ul class="cont1_2_wrap">
+                <li><img src="images/album_1.jpg" alt=""></li>
+                <li><img src="images/album_2.jpg" alt=""></li>
+                <li><img src="images/album_3.jpg" alt=""></li>
+                <li><img src="images/album_4.jpg" alt=""></li>
+                <li><img src="images/album_5.jpg" alt=""></li>
+                <li><img src="images/album_6.jpg" alt=""></li>
+                <li><img src="images/album_7.jpg" alt=""></li>
+                <li><img src="images/album_8.jpg" alt=""></li>
+                <li><img src="images/album_20.jpg" alt="" class="ab_20"></li>
+                <li><img src="images/album_21.jpg" alt="" class="ab_21"></li>
+                <li><img src="images/album_22.jpg" alt="" class="ab_22"></li>
+            </ul>
+            <div class="cont1_2_bg"><img src="images/main_image_1.jpg" alt=""></div>
+        </div>
+    </div>
+</div>
+</section>
+<div class="parallax-window" data-parallax="scroll" data-image-src="images/parralax_image.jpg"></div>
+<!-- 비디오 콘텐트로 사용 -->
+<!-- <video src="images/아이유(IU) - [BEHIND] 'Celebrity' MV Behind Film.mp4" muted autoplay loop></video> -->
+<script>
+    //DOM 생성 후
+    var originalID, cloneID; //인터벌 포인터
+    window.addEventListener('DOMContentLoaded', function(){
+    
+        //롤링 배너 복제본 생성
+        let roller = document.querySelector('.roller');
+        roller.id = 'roller1';
+    
+        let clone = roller.cloneNode(true);
+        clone.id = 'roller2';
+        document.querySelector('.wrap').appendChild(clone); //부착
+    
+        //원본, 복제본 배너 위치 지정
+        document.querySelector('#roller1').style.left = '0px';
+        document.querySelector('#roller2').style.left = document.querySelector('.roller ul').offsetWidth+'px';
+    
+        //클래스 할당
+        roller.classList.add('original');
+        clone.classList.add('clone');
+    
+        //인터벌 메서드로 애니메이션 생성
+        let rollerWidth = document.querySelector('.roller ul').offsetWidth;//회전 배너 너비값
+        let betweenDistance = 1;//이동 크기 - 정수여야 함
+        originalID = window.setInterval(betweenRollCallback, parseInt(1000/100), betweenDistance, document.querySelector('#roller1'));
+        cloneID = window.setInterval(betweenRollCallback, parseInt(1000/100), betweenDistance, document.querySelector('#roller2'));
+    
+        //인터벌 애니메이션 함수(공용)
+        function betweenRollCallback(d, roller){
+            let left = parseInt(roller.style.left);
+            roller.style.left = (left - d)+'px';//이동
+            //조건부 위치 리셋
+            if(rollerWidth + (left - d) <= 0){
+                roller.style.left = rollerWidth+'px';
+            }
+        }		
+    });
+</script>
+<section class="cont2">
+    <h2 class="hide">아이유 영상</h2>
+    <div class="cont2_1">
+        <div class="container">
+            <div class="rollingbanner">
+                <div class="wrap">
+                    <div class="roller">
+                        <ul class="sa">
+                            <li class=""><a href="https://www.youtube.com/watch?v=aZFDfNgAfMQ">
+                            <video muted autoplay loop>
+                                <source src="images/아이유(IU) - [BEHIND] 'strawberry moon' MV Behind Film.mp4" type="video/mp4">
+                              </video></a></li>
+                            <li class=""><a href="https://www.youtube.com/watch?v=taZtf3jB8HY">
+                                <video muted autoplay loop>
+                                    <source src="images/아이유(IU) - [BEHIND] '라일락' MV Behind Film.mp4" type="video/mp4">
+                                  </video></a></li>
+                            <li class=""><a href="https://www.youtube.com/watch?v=6AUR2KOvl3Q">
+                                    <video muted autoplay loop>
+                                        <source src="images/아이유(IU) - [BEHIND] 'Celebrity' MV Behind Film.mp4" type="video/mp4">
+                                      </video></a></li>
+                            <li class=""><a href="https://www.youtube.com/watch?v=Dy6Xc89L_tM">
+                                <video muted autoplay loop>
+                                    <source src="images/[IU] 2022 IU Season’s Greetings Preview.mp4" type="video/mp4">
+                </video></a></li>
+                <li class=""><a href="https://www.youtube.com/watch?v=aZFDfNgAfMQ">
+                <video muted autoplay loop>
+                    <source src="images/아이유(IU) - [BEHIND] 'strawberry moon' MV Behind Film.mp4" type="video/mp4">
+                    </video></a></li>
+                <li class=""><a href="https://www.youtube.com/watch?v=taZtf3jB8HY">
+                    <video muted autoplay loop>
+                        <source src="images/아이유(IU) - [BEHIND] '라일락' MV Behind Film.mp4" type="video/mp4">
+                        </video></a></li>
+                <li class=""><a href="https://www.youtube.com/watch?v=6AUR2KOvl3Q">
+                        <video muted autoplay loop>
+                            <source src="images/아이유(IU) - [BEHIND] 'Celebrity' MV Behind Film.mp4" type="video/mp4">
+                            </video></a></li>
+                <li class=""><a href="https://www.youtube.com/watch?v=Dy6Xc89L_tM">
+                    <video muted autoplay loop>
+                        <source src="images/[IU] 2022 IU Season’s Greetings Preview.mp4" type="video/mp4">
+                        </video></a></li>
+                        <li class=""><a href="https://www.youtube.com/watch?v=aZFDfNgAfMQ">
+                            <video muted autoplay loop>
+                                <source src="images/아이유(IU) - [BEHIND] 'strawberry moon' MV Behind Film.mp4" type="video/mp4">
+                              </video></a></li>     
+                            <li class=""><a href="https://www.youtube.com/watch?v=aZFDfNgAfMQ">
+                                    <video autoplay="" muted="" loop="">
+        <source src="images/아이유(IU) - [BEHIND] 'strawberry moon' MV Behind Film.mp4" type="video/mp4"></a>
+        </video>
+                            </li>
+                            <li class=""><a href="https://www.youtube.com/watch?v=taZtf3jB8HY">
+                                    <video autoplay="" muted="" loop="">
+        <source src="images/아이유(IU) - [BEHIND] '라일락' MV Behind Film.mp4" type="video/mp4"></a>
+        </video>
+                            </li>
+                            <li class=""><a href="https://www.youtube.com/watch?v=6AUR2KOvl3Q">
+                                    <video autoplay="" muted="" loop="">
+        <source src="images/아이유(IU) - [BEHIND] 'Celebrity' MV Behind Film.mp4" type="video/mp4"></a>
+        </video>
+                            </li>
+                            <li class=""><a href="https://www.youtube.com/watch?v=Dy6Xc89L_tM">
+                                    <video autoplay="" muted="" loop="">
+        <source src="images/[IU] 2022 IU Season’s Greetings Preview.mp4" type="video/mp4">
+        </video></a>
+                            </li>
+                            <li class=""><a href="https://www.youtube.com/watch?v=aZFDfNgAfMQ">
+                                <video autoplay="" muted="" loop="">
+    <source src="images/아이유(IU) - [BEHIND] 'strawberry moon' MV Behind Film.mp4" type="video/mp4"></a>
+    </video>
+                        </li>
+                        <li class=""><a href="https://www.youtube.com/watch?v=taZtf3jB8HY">
+                                <video autoplay="" muted="" loop="">
+    <source src="images/아이유(IU) - [BEHIND] '라일락' MV Behind Film.mp4" type="video/mp4"></a>
+    </video>
+                        </li>
+                        <li class=""><a href="https://www.youtube.com/watch?v=6AUR2KOvl3Q">
+                                <video autoplay="" muted="" loop="">
+    <source src="images/아이유(IU) - [BEHIND] 'Celebrity' MV Behind Film.mp4" type="video/mp4"></a>
+    </video>
+                        </li>
+                        <li class=""><a href="https://www.youtube.com/watch?v=Dy6Xc89L_tM">
+                                <video autoplay="" muted="" loop="">
+    <source src="images/[IU] 2022 IU Season’s Greetings Preview.mp4" type="video/mp4">
+    </video></a>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+    <!-- <div class="cont2_2">dㄹㅇㄴㄹㅇ</div> -->
+    <!-- <div class="cont2_3">dㄹㄴㅇㄹㅇㄹㄴㅇ</div> -->
+</section>
+<div class="parallax-window" data-parallax="scroll" data-image-src="images/iu_parral_2_01.jpg"></div>
+<!--  -->
+<section class="cont3">
+    <h2 class="hide">이지은 작품 활동</h2>
+    <!-- <div class="iu_d_list_wrap"> -->
+    <div id="drama" class="sa iu_images">
+        <ul class="iu_images_wrap">
+            <li><img src="images/iu_profile_image_sub_1.jpg" alt=""><div class="box1"><p style="font-family:'Noto Sans KR', sans-serif;;color:#fff;position: relative;top: 43%;left: 34%;font-size: 20px;">아이유(IU)</p></div></li>
+            <li><img src="images/iu_profile_image_sub_2.jpg" alt=""><div class="box1"><p style="font-family:'Noto Sans KR', sans-serif;;color:#fff;position: relative;top: 43%;left: 34%;font-size: 20px;">아이유(IU)</p></div></li>
+            <li><img src="images/iu_profile_image_sub_3.jpg" alt=""><div class="box1"><p style="font-family:'Noto Sans KR', sans-serif;;color:#fff;position: relative;top: 43%;left: 34%;font-size: 20px;">아이유(IU)</p></div></li>
+            <li><img src="images/iu_profile_image_sub_4.jpg" alt=""><div class="box1"><p style="font-family:'Noto Sans KR', sans-serif;;color:#fff;position: relative;top: 43%;left: 34%;font-size: 20px;">아이유(IU)</p></div></li>
+            <li><img src="images/iu_profile_image_sub_5.jpg" alt=""><div class="box1"><p style="font-family:'Noto Sans KR', sans-serif;;color:#fff;position: relative;top: 43%;left: 34%;font-size: 20px;">아이유(IU)</p></div></li>
+            <li><img src="images/iu_profile_image_sub_6.jpg" alt=""><div class="box1"><p style="font-family:'Noto Sans KR', sans-serif;;color:#fff;position: relative;top: 43%;left: 34%;font-size: 20px;">아이유(IU)</p></div></li>
+        </ul>
+    </div>
+    <p>DRAMA</p>
+    <div id="drama" class="sa iu_d_lis">
+        <ul class="list-unstyled">
+            <li>
+                <div class="album">
+                    <img src="images/d-7.jpg" alt="">
+                </div>
+                <div class="album-info">
+                    <h2><b>tvN 토일드라마 <br>[호텔 델루나]<br></b> '장만월' 역</h2>
+                    <p>2019</p>
+                </div>
+            </li>
+            <li>
+                <div class="album">
+                    <img src="images/d-6.png" alt="">
+                </div>
+                <div class="album-info">
+                    <h2><b>tvN 수목드라마<br> [나의 아저씨]<br></b> '이지안' 역</h2>
+                    <p>2018</p>
+                </div>
+            </li>
+            <li>
+                <div class="album">
+                    <img src="images/d-5.jpg" alt="">
+                </div>
+                <div class="album-info">
+                    <h2><b>월화드라마<br> [달의연인 – 보보경심 려]<br></b> '해 수' 역 / '고하진' 역</h2>
+                    <p>2016</p>
+                </div>
+            </li>
+            <li>
+                <div class="album">
+                    <img src="images/d-4.jpg" alt="">
+                </div>
+                <div class="album-info">
+                    <h2><b>KBS 금토드라마<br> [프로듀사]<br></b> '신디' 역</h2>
+                    <p>2015</p>
+                </div>
+            </li>
+            <li>
+                <div class="album">
+                    <img src="images/d-3.jpg" alt="">
+                </div>
+                <div class="album-info">
+                    <h2><b>KBS 수목드라마<br> [예쁜 남자]<br> </b> '김보통' 역</h2>
+                    <p>2013</p>
+                </div>
+            </li>
+            <li>
+                <div class="album">
+                    <img src="images/d-2.jpg" alt="">
+                </div>
+                <div class="album-info">
+                    <h2><b>KBS 주말드라마<br> [최고다 이순신]<br></b> '이순신' 역</h2>
+                    <p>2013</p>
+                </div>
+            </li>
+            <li>
+                <div class="album">
+                    <img src="images/d-1.jpg" alt="">
+                </div>
+                <div class="album-info">
+                    <h2><b>KBS 월화드라마<br> [드림하이]<br></b> '김필숙' 역</h2>
+                    <p>2011</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <p class="p_2">MOVIE</p>
+    <div id="movie" class="sa tab-pane fade mt20 active in">
+        <ul class="list-unstyled">
+            <li>
+                <div class="album">
+                    <img src="images/m-2.jpg" alt="">
+                </div>
+                <div class="album-info">
+                    <h2>
+                        <b>[브로커]<br> ‘소영’ 역</b><br>
+                    </h2>
+                    <p>2022</p>
+                </div>
+            </li>
+            <li>
+                <div class="album">
+                    <img src="images/m-1.jpg" alt="">
+                </div>
+                <div class="album-info">
+                    <h2>
+                        <b>NETFLIX<br> [페르소나]</b><br>
+                        <b>러브 세트</b> 'IU'역<br>
+                        <b>썩지 않게 아주<br> 오래</b> '은' 역<br>
+                        <b>밤을 걷다</b> '지은' 역<br>
+                        <b>키스가 죄</b> '한나' 역
+                    </h2>
+                    <p>2019</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <p id="p_3">AWARDS</p>
+    <div id="awards" class="sa tab-pane fade active in">
+        <ul class="list-unstyled">
+            <li>
+                <div class="album-info">
+                    <h2>제19회 한국대중음악상 최우수 팝 음반 부문 </h2>
+                    <p>2022</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제11회 가온차트 뮤직 어워즈 올해의 음반제작상, 올해의 작사가상, 디지털음원부문 올해의 가수상 1월∙3월∙10월 </h2>
+                    <p>2022</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제31회 하이원 서울가요대상 최고음원상, 본상 </h2>
+                    <p>2022</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제36회 골든디스크 어워즈 디지털음원부문 대상∙본상, 음반부문 본상 </h2>
+                    <p>2022</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>한터뮤직어워즈 여성 솔로부문 아티스트상 </h2>
+                    <p>2021</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>엠넷 아시안 뮤직 어워즈 여자 가수상, 베스트 보컬 퍼포먼스, 베스트 컬래버레이션 </h2>
+                    <p>2021</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제 13회 멜론뮤직어워드 올해의 아티스트, 올해의 앨범, 베스트 솔로 여자, 송라이터상, TOP10 </h2>
+                    <p>2021</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>아시아 아티스트 어워즈 가수부문 U+아이돌Live 인기상 </h2>
+                    <p>2021</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>KAA 어워드 광고주가 뽑은 좋은 모델상 </h2>
+                    <p>2021</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>APAN MUSIC AWARDS 아이돌챔프 인기상 국내 여자 솔로 부문</h2>
+                    <p>2021, 2020</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제10회 가온차트 뮤직 어워즈 올해의 작사가상, 올해의 롱런 음원상, 올해의 가수상 5월</h2>
+                    <p>2021</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제35회 골든디스크 어워즈 디지털음원부문 대상, 디지털음원부문 본상</h2>
+                    <p>2021</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>Mnet 아시안 뮤직 어워즈 여자 가수상, 베스트 보컬 퍼포먼스 솔로, 베스트 컬래버레이션</h2>
+                    <p>2020</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제12회 멜론뮤직어워드 TOP10, 장르상 록부문</h2>
+                    <p>2020</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제9회 가온차트 뮤직 어워즈 디지털음원부문 올해의 가수상 11월</h2>
+                    <p>2020</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제55회 백상예술대상 V LIVE 인기상</h2>
+                    <p>2019</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제8회 가온차트 뮤직 어워즈 디지털음원부문 올해의 가수상 10월</h2>
+                    <p>2019</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제10회 멜론뮤직어워드 뮤직스타일상 R&amp;B소울부문</h2>
+                    <p>2018</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>아시아 아티스트 어워즈 배우부문 올해의 아티스트, 아시아 핫티스트, 스타페이 인기상</h2>
+                    <p>2018</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제6회 아시아태평양 스타 어워즈 중편드라마 여자 최우수연기상</h2>
+                    <p>2018</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제15회 한국대중음악상 종합분야 최우수 팝 음반상</h2>
+                    <p>2018</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제7회 가온차트 뮤직 어워즈 디지털음원 부문 올해의 가수상 3월∙4월, 올해의 롱런 음원상, 올해의 작사가상</h2>
+                    <p>2018</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제27회 하이원 서울가요대상 최고앨범상</h2>
+                    <p>2018</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제32회 골든디스크 어워즈 디지털음원부문 대상, 디지털음원부문 본상</h2>
+                    <p>2018</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제9회 멜론뮤직어워드 올해의 앨범상, 송라이터상, TOP10</h2>
+                    <p>2017</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>Mnet 아시안 뮤직 어워드 여자가수상</h2>
+                    <p>2017</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>SAF 연기대상 베스트 커플상</h2>
+                    <p>2016</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제13회 한국대중음악상 네티즌이 뽑은 올해의 음악인 여자부문</h2>
+                    <p>2016</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제6회 대한민국 대중문화예술상 국무총리표창</h2>
+                    <p>2015</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>Mnet 아시안 뮤직 어워드 여자가수상, The Most Popular Vocalist 상</h2>
+                    <p>2014</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제6회 멜론뮤직어워드 아티스트상, TOP10</h2>
+                    <p>2014</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제3회 가온차트 K-POP 어워드 올해의 가수상 음원부문 10월</h2>
+                    <p>2014</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>KBS 연기대상 여자 신인연기상, 베스트 커플상</h2>
+                    <p>2013</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제5회 멜론뮤직어워드 TOP10</h2>
+                    <p>2013</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>한류 10주년 대상 뮤직대상 여자 솔로아티스트부문</h2>
+                    <p>2013</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제27회 일본 골드디스크상 베스트3 뉴아티스트 아시아부문</h2>
+                    <p>2013</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제4회 멜론뮤직어워드 TOP10</h2>
+                    <p>2012</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>Mnet 아시안 뮤직 어워드 여자솔로상</h2>
+                    <p>2012</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제24회 한국PD대상 가수부문 출연자상</h2>
+                    <p>2012</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제9회 한국대중음악상 올해의 노래상, 노래부문 최우수 팝 노래상, 네티즌이 뽑은 올해의 여자 아티스트상</h2>
+                    <p>2012</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제1회 K-POP 어워드 올해의 가수상 음원부문 2월∙12월</h2>
+                    <p>2012</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>2011 올케이팝 어워드 여자 솔로 아티스트상</h2>
+                    <p>2012</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제21회 하이원 서울가요대상 본상, 최고앨범상</h2>
+                    <p>2012</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제7회 아시아 모델상 시상식 BBF 인기가수상</h2>
+                    <p>2012</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>Mnet 아시안 뮤직 어워드 베스트 보컬 퍼포먼스 솔로상</h2>
+                    <p>2011</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제3회 멜론뮤직어워드 SK플래닛 베스트송상, TOP10</h2>
+                    <p>2011</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제4회 스타일 아이콘 어워드 본상</h2>
+                    <p>2011</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>한국 광고주협회 광고주가 뽑은 좋은 모델상</h2>
+                    <p>2011</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제5회 Mnet 20's Choice 핫 CF스타상</h2>
+                    <p>2011</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제1회 올레-롯데 스마트폰 영화제 시상식 특별상</h2>
+                    <p>2011</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제20회 하이원 서울가요대상 디지털음원상, 본상</h2>
+                    <p>2011</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>SBS 연예대상 예능 뉴스타상</h2>
+                    <p>2010</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제2회 멜론뮤직어워드 TOP10</h2>
+                    <p>2010</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제25회 골든디스크 시상식 디지털음원부문 본상</h2>
+                    <p>2010</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2>제11회 대한민국 영상대전 가수부문 포토제닉상</h2>
+                    <p>2010</p>
+                </div>
+            </li>
+            <li>
+                <div class="album-info">
+                    <h2> 제17회 대한민국 연예예술상 신세대가수상</h2>
+                    <p>2010</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+<!-- </div> -->
+</section>
+<script>
+    // Scroll Animation (sa, 스크롤 애니메이션)
+    const saTriggerMargin = 350;
+    const saElementList = document.querySelectorAll('.sa');
+
+    const saFunc = function() {
+      for (const element of saElementList) {
+        if (!element.classList.contains('show')) {
+          if (window.innerHeight > element.getBoundingClientRect().top + saTriggerMargin) {
+            element.classList.add('show');
+          }
+        }
+      }
+    }
+
+    window.addEventListener('load', saFunc);
+    window.addEventListener('scroll', saFunc);
+  </script>
+<div class="parallax-window3 img_1" data-parallax="scroll" data-image-src="images/iu_profile_image_bg_1.jpg"></div>
+<!--  -->
+<!-- <section class="cont4">
+    <h2 class="hide">cont1</h2>
+    <div class="cont1_1">d</div>
+    <div class="cont1_1">d</div>
+    <div class="cont1_1">d</div>
+</section> -->
+<!-- <div class="parallax-window" data-parallax="scroll" data-image-src="images/spiral-galaxy-1400x900.jpg"></div> -->
+
+<!-- <div class="parallax-window" data-parallax="scroll" data-image-src="images/shinsaegyung_profile_image_bg_1.jpg"></div> -->
+
+<!-- 이 사이에 넣어서 겹쳐보이는 것 뿐임 -->
+</main>
+<footer class="height">
+    <h2 class=""><img src="images/f-logo.jpg" alt="EDAM"></h2>
+    <div class="sns">
+        <ul>
+            <li><a href="#none"><img src="images/sns-n-pc.jpg" alt="네이버"></a></li>
+            <li><a href="#none"><img src="images/sns-t-pc.jpg" alt="트위터"></a></li>
+            <li><a href="#none"><img src="images/sns-i-pc.jpg" alt="인스타그램"></a></li>
+            <li><a href="#none"><img src="images/sns-y-pc.jpg" alt="유튜브"></a></li>
+        </ul>
+        <div class="p_wrap">
+            <p class="footer_p_3">© 2020 EDAM. All rights reserved.</p>
+        <div class="p_wrap_wrap">
+        <p class="footer_p_1">배종한</p><address>서울 특별시 강남구 테헤란로103길 17</address>
+        <p class="footer_p_2">edam@edam-ent.com</p>
+        </div>
+        
+        </div>
+    </div>
+</footer>
+</body>
+</html>
